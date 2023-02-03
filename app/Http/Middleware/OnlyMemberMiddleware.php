@@ -16,8 +16,6 @@ class OnlyMemberMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-
-
         if($request->session()->exists("user")){
             return $next($request);
         }else{
